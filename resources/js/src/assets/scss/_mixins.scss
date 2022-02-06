@@ -1,0 +1,143 @@
+// Min
+@mixin up-568 {
+    @media screen and (min-width: 568px) {
+        @content;
+    }
+}
+@mixin up-768 {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+@mixin up-992 {
+    @media screen and (min-width: 992px) {
+        @content;
+    }
+}
+@mixin up-1024 {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+@mixin up-1200 {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+
+@mixin up-1400 {
+    @media screen and (min-width: 1400px) {
+        @content;
+    }
+}
+@mixin up-1600 {
+    @media screen and (min-width: 1600px) {
+        @content;
+    }
+}
+
+// Max
+@mixin down-375 {
+    @media screen and (max-width: 375px) {
+        @content;
+    }
+}
+@mixin down-414 {
+    @media screen and (max-width: 414px) {
+        @content;
+    }
+}
+@mixin down-480 {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+@mixin down-568 {
+    @media screen and (max-width: 568px) {
+        @content;
+    }
+}
+@mixin down-640 {
+    @media screen and (max-width: 640px) {
+        @content;
+    }
+}
+@mixin down-768 {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+@mixin down-850 {
+    @media screen and (max-width: 850px) {
+        @content;
+    }
+}
+@mixin down-992 {
+    @media screen and (max-width: 992px) {
+        @content;
+    }
+}
+@mixin down-1024 {
+    @media screen and (max-width: 1024px) {
+        @content;
+    }
+}
+@mixin down-1080 {
+    @media screen and (max-width: 1080px) {
+        @content;
+    }
+}
+@mixin down-1200 {
+    @media screen and (max-width: 1200px) {
+        @content;
+    }
+}
+@mixin down-1280 {
+    @media screen and (max-width: 1280px) {
+        @content;
+    }
+}
+@mixin down-1366 {
+    @media screen and (max-width: 1366px) {
+        @content;
+    }
+}
+@mixin down-1400 {
+    @media screen and (max-width: 1400px) {
+        @content;
+    }
+}
+@mixin down-1440 {
+    @media screen and (max-width: 1440px) {
+        @content;
+    }
+}   
+@mixin down-1600 {
+    @media screen and (max-width: 1600px) {
+        @content;
+    }
+}
+@mixin down-1920 {
+    @media screen and (max-width: 1920px) {
+        @content;
+    }
+}
+
+@mixin size ($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin equal-size ($s) {
+    width: $s;
+    height: $s;
+}
+
+@mixin imgCover {
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}

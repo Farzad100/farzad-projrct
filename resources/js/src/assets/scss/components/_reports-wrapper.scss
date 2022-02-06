@@ -1,0 +1,23 @@
+._reports-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  ._w-3 {
+    width: 100%;
+  }
+
+  ._w-2 {
+    width: calc(100% / 3 * 2);
+  }
+
+  ._w-1 {
+    width: calc(100% / 3);
+  }
+
+  @include down-1200 {
+    ._w-2,
+    ._w-1 {
+      width: 100%;
+    }
+  }
+}

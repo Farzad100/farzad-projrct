@@ -1,0 +1,127 @@
+.landing-layout {
+  .form {
+    padding: 0;
+    flex-direction: row;
+    justify-content: unset;
+    align-items: unset;
+  }
+
+  &-inner {
+    width: 100%;
+    display: flex;
+
+    > div {
+      width: 50%;
+
+      &:nth-of-type(1) {
+        padding: 10rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        form {
+          max-width: 450px;
+        }
+      }
+
+      &:nth-of-type(2) {
+        background: $color-primary-dark;
+        position: relative;
+        padding: 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &:before {
+          content: '';
+          height: 100%;
+          width: 20px;
+          position: absolute;
+          right: 0;
+          top: 0;
+
+          background: linear-gradient(
+            to bottom,
+            $white-color,
+            $white-color 50%,
+            $color-primary-dark 50%,
+            $color-primary-dark
+          );
+          /* The rectangle in which to repeat. 
+            It can be fully wide in this case */
+          background-size: 100% 70px;
+        }
+
+        .prev-data {
+          width: 445px;
+
+          .pd-c {
+            display: flex;
+            flex-direction: column;
+            border-radius: $radius-sm;
+
+            span {
+              font-weight: normal;
+              opacity: .7;
+              font-size: 14px;
+
+              &.o100 {
+                opacity: 1;
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .card {
+    width: 445px;
+    height: 255px;
+    margin: 1px;
+    border: 0;
+    border-radius: $radius-sm;
+    
+    >div {
+      width: 100%;
+      height: 100%;
+      margin-right: auto;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: $radius;
+      color: #000;
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .bottom {
+        color: #000;
+
+        .code {
+          font-family: 'Space Mono', monospace;
+          font-size: 34px;
+        }
+
+        span {
+          font-size: 16px;
+        }
+
+        .ccfooter {
+          font-size: 16px;
+          margin-top: 15px;
+          display: flex;
+          justify-content: space-between;
+
+          .code-font {
+            font-family: 'Space Mono', monospace;
+          }
+        }
+      }
+    }
+  }
+}

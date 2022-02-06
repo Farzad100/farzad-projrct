@@ -1,0 +1,139 @@
+.default-pages-nav {
+  background: $white-color;
+  box-shadow: 0 1px 5px $color-gray;
+  padding: 15px 25px;
+
+  .wrapper {
+    width: 100%;
+    max-width: 1900px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .controller {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    > div {
+      display: none;
+      align-items: center;
+
+      a,
+      button {
+        margin-right: 15px;
+      }
+    }
+
+    .toggle-button {
+      background: transparent;
+      font-size: 24px;
+      border: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo {
+      img {
+        height: 45px;
+      }
+    }
+  }
+
+  .links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 45px;
+    width: 100%;
+
+    a {
+      color: $color-primary-dark;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+
+      i {
+        font-size: 12px;
+        padding-left: 10px;
+        opacity: .5;
+      }
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+
+    .right {
+      a {
+        margin-left: 25px;
+      }
+    }
+
+    .left {
+      a {
+        margin-right: 25px;
+      }
+    }
+  }
+
+  @include down-1200 {
+    padding: 15px 0;
+
+    .wrapper {
+      flex-direction: column;
+    }
+
+    .controller {
+      padding: 0 25px;
+
+      > div {
+        display: flex;
+      }
+    }
+
+    .controller,
+    .links {
+      width: 100%;
+    }
+
+    .links {
+      padding-top: 40px;
+      margin-right: 0;
+      flex-direction: column;
+      display: none;
+
+      &.open {
+        display: flex;
+      }
+
+      > div {
+        width: 100%;
+
+        a {
+          &:last-child {
+            border-bottom: 0;
+          }
+        }
+      }
+
+      .left {
+        display: none;
+      }
+      
+      a {
+        display: flex;
+        padding: 10px 25px;
+        margin: 0 !important;
+        border-bottom: 1px solid #eee;
+      }
+
+      .btn {
+        display: none;
+      }
+    }
+  }
+  
+}

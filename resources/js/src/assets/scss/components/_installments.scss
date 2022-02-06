@@ -1,0 +1,33 @@
+.installments-list {
+  .table {
+    margin-top: 30px;
+    margin-bottom: 0;
+
+    thead {
+      th {
+        border: 0 !important;
+        color: $light-color-primary-dark !important;
+        padding: 1rem 1.5rem !important;
+        font-weight: 300;
+      }
+    }
+
+    th, td {
+      padding: 1rem 1.5rem;
+    }
+
+    tbody {
+      tr {
+        &:last-child {
+          th, td {
+            border: 0
+          }
+        }
+      }
+    }
+
+    @include down-768 {
+      font-size: 14px;
+    }
+  }
+}

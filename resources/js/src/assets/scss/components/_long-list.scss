@@ -1,0 +1,257 @@
+.long-list {
+  border: 1px solid rgba($color-primary, .15);
+  border-radius: $radius !important;
+  padding-top: 10px;
+
+  @include down-568 {
+    border: 0;
+    border-radius: 0;
+  }
+
+  &-table {
+    margin-bottom: 0;
+    font-size: .8rem;
+    
+    thead {
+      tr {
+        margin-bottom: 25px;
+      }
+
+      th {
+        font-weight: 100;
+        border: 0;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+        padding-bottom: 1em;
+        white-space: nowrap;
+        transition: $trans;
+
+        &.nopointer {
+          pointer-events: none;
+          cursor: text;
+        }
+        
+        > button {
+          background: transparent;
+          border: 0;
+          border-radius: 50px;
+          cursor: pointer;
+
+          &.sorted {
+            i {
+              transform: rotate(180deg);
+            }
+          }
+          &.activeHead {
+            .sort-arrows {
+              display: flex ;
+            }
+          }
+
+          &:focus {
+            outline: none;
+          }
+          &:hover .sort-arrows i{
+            display: flex !important;
+          }
+          
+        }
+      }
+
+      .sort-arrows {
+        display: none ;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+        cursor: pointer;
+
+        > i {
+          height: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 1;
+          cursor: pointer;
+        }
+
+        & {
+          cursor: pointer;
+          i.info {
+            opacity: 1;
+            font-weight: 700;
+          }
+        }
+
+        & {
+          cursor: pointer;
+          i.noinfo {
+            opacity: 1;
+            font-weight: normal;
+            
+          }
+        }
+      }
+
+      @include down-568 {
+        display: none;
+      }
+    }
+
+    tbody {
+      tr {
+        width: 100%;
+        color: #000;
+        border-color: rgba($color-primary, .15);
+
+        td:last-child {
+          text-align: left;
+        }
+
+        th, td {
+          vertical-align: middle;
+          padding: 15px 1.5rem;
+        }
+
+        td {
+          .has-tooltip {
+            border-bottom: 1px dotted currentColor;
+            cursor: help;
+          }
+        }
+
+        @include up-568 {
+          &:last-child {
+            border-color: transparent;
+          }
+        }
+
+        @include down-568 {
+          border-top: 15px solid $white-color;
+          
+          &:nth-of-type(even) {
+            background: rgba($color-gray, .3);
+          }
+        }
+      }
+    }
+
+    th, td {
+      white-space: nowrap;
+
+      @include down-1400 {
+        &:not(:last-child) {
+          padding: 15px 1rem;
+          padding-left: 0;
+        }
+      }
+
+      .btn {
+        font-size: .8rem;
+
+        * {
+          pointer-events: none;
+        }
+      }
+
+      @include down-568 {
+        display: block;
+
+        &:before {
+          content: attr(data-label);
+          display: block;
+          font-weight: bold;
+          line-height: 1.5;
+          width: 35%;
+        }
+      }
+    }
+
+    .text-sm {
+      font-size: .5rem;
+    }
+
+    @include down-1200 {
+      th, td {
+        &:nth-of-type(2) {
+          display: none;
+        }
+        &:nth-of-type(3) {
+          display: none;
+        }
+      }
+    }
+
+    @include down-992 {
+      th, td {
+        &:nth-of-type(4) {
+          display: none;
+        }
+
+        padding: 15px 1rem !important;
+      }
+    }
+
+    @include down-768 {
+      th, td {
+        .btn {
+          font-size: .5rem;
+        }
+      }
+    }
+
+    @include down-568 {
+      th, td {
+        border-left: 1px solid rgba($color-primary, .15);
+        border-right: 1px solid rgba($color-primary, .15);
+
+        &:first-child {
+          border-top: 1px solid rgba($color-primary, .15);
+        }
+
+        &:not(.empty) {
+          display: flex !important;
+        }
+      }
+    }
+
+    @include up-568 {
+      th, td {
+        &:last-child {
+          display: table-cell !important;
+        }
+      }
+    }
+  }
+
+  @include down-768 {
+    overflow-x: scroll;
+  }
+
+  &.minimal {
+    border-radius: 0 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+
+    thead {
+      tr {
+        th:not(:first-child) {
+          border-bottom: 1px solid rgba($color-primary, .15);
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td:first-child {
+          border-left: 1px solid rgba($color-primary, .15);
+        }
+
+        td:last-child {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,724 @@
+@import '../js/src/assets/scss/fonts';
+@import '../js/src/assets/scss/variables';
+@import '../js/src/assets/scss/mixins';
+@import '../js/src/assets/scss/utils';
+
+.header-style-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/images/shop-bg2.png");
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  border-radius: 32px;
+  @include down-1600 {
+    height: 88vh;
+  }
+  @include down-1400 {
+    height: 85vh;
+  }
+  @include down-992 {
+    height: 88vh;
+  }
+  .container {
+    .row {
+      @include down-768 {
+        flex-direction: column-reverse;
+      }
+      .col-12 {
+        &:first-child {
+          @include down-768 {
+            text-align: center !important;
+            align-items: center !important;
+          }
+          @include down-568 {
+            padding: 0 30px;
+          }
+          
+        }
+        &:last-child {
+          img {
+            width: 110%;
+            @include down-1600 {
+              width: 85%;
+            }
+            @include down-1400 {
+              width: 75%;
+            }
+            @include down-992 {
+              width: 100%;
+            }
+            @include down-768 {
+              width: 77%;
+               margin: 0 auto;
+               margin-top: -20%;
+            }
+            @include down-568 {
+               width: 85%;
+               margin-top: -18%;
+            }
+            @include down-480 {
+              width: 95%;
+           }
+          }
+        }
+      }
+    }
+  }
+  
+
+  
+
+  h1 {
+    font-size: 1.8rem;
+    line-height: 1.9;
+    color: $secondary-color;
+    font-weight: 700;
+    @include down-1600 {
+      font-size: 1.8rem;
+      margin-bottom: 15px !important;
+    }
+    @include down-1024 {
+      font-size: 1.5rem;
+      margin-bottom: 25px !important;
+    }
+    @include down-850 {
+      font-size: 1.2rem;
+    }
+    @include down-768 {
+      font-size: 1.1rem;
+      margin-bottom: 10px !important;
+    }
+  
+    
+  }
+  h5 {
+    color: $secondary-color;
+    font-weight: 600;
+    font-size: 1.4rem;
+    @include down-1600 {
+      font-size: 1.2rem;
+      margin-bottom: 0 !important;
+    }
+
+    @include down-1024 {
+      font-size: 1rem;
+    }
+    @include down-768 {
+      font-size: .9rem;
+      margin-bottom: 0px !important;
+      line-height: 2.2;
+    }
+  }
+  a {
+    margin-top: 100px;
+    @include down-1366 {
+      margin-top: 45px;
+    }
+    @include down-1280 {
+      margin-top: 30px;
+    }
+    @include down-1024 {
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.eshop {
+  background: linear-gradient(0deg , rgba(219, 246, 253, 0.7), rgba(219, 246, 253, 0.7));
+  .container {
+    .row {
+      .col-12 {
+        &:first-child {
+          @include down-768 {
+            padding-left: 15px !important;
+          }
+          @include down-568 {
+            padding-left: 30px !important;
+          }
+          h2 {
+            margin-top: -10%;
+            @include down-992 {
+              margin-top: 0;
+            }
+          }
+          h5 {
+            padding-left: 70px;
+            @include down-992 {
+              padding-left: 0;
+            }
+          }
+          a {
+            margin-top: 60px;
+            @include down-1600 {
+              margin-top: 32px;
+            }
+          }
+        }
+        &:last-child {
+          img {
+            @include down-768 {
+              width: 70%;
+              margin-top: -50px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.organ {
+  background-image: url("/images/organ-back.jpg");
+  @include down-992 {
+    height: 65vh;
+  }
+
+  @include down-768 {
+    height: 90vh;
+  }
+  .row {
+    .col-12 {
+      @include down-768 {
+        padding-left: 15px !important;
+      }
+      @include down-568 {
+        padding-left: 30px !important;
+      } 
+      &:first-child {
+        h5 {
+          padding-left: 100px;
+          @include down-1200 {
+            padding-left: 75px;
+          }
+          @include down-992 {
+            padding-left: 5px;
+          }
+        }
+        div {
+          a {
+            @include down-992 {
+              text-align: center;
+            }
+            @include down-414 {
+              font-size: .8rem;
+              padding: 8px 10px;
+            }
+            &:first-child {
+              background-color: $secondary-color;
+              color: $white-color;
+              @include down-1200 {
+                margin-left: 10px !important;
+                i {
+                  margin-left: 5px;
+                }
+              }
+              
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.about2 {
+  .container {
+    padding: 30px 35px;
+    @include down-568 {
+      margin-top: -15% !important;
+    }
+    h2 {
+      margin-top: 0 !important; 
+    }
+    h5 {
+      padding-left: 0;
+      font-size: 1.1rem;
+      @include down-992 {
+        font-size: .9rem;
+      }
+    }
+  }
+  
+}
+
+
+.features2 {
+  .container {
+    .row {
+      .col-12 {
+        border: none !important;
+      }
+    }
+  }
+  &:after {
+    display: none;
+  }
+  &:before {
+    top: 180px !important;
+  }
+}
+
+.features3 {
+  &:after {
+    display: none;
+  }
+  &:before {
+    top: 230px !important;
+  }
+}
+
+.steps2 {
+  position: relative;
+  justify-content: center;
+  .step {
+    
+    .t {
+      bottom: -30px !important;
+      @include down-1080 {
+        bottom: -60px !important;
+        h4 {
+          font-size: 0.85rem !important;
+        }
+      }
+      
+    }
+    &.align-items-end {
+      .t {
+        bottom: -125px !important;
+      }
+    }
+    &.step4 {
+      .t {
+        bottom: -150px !important;
+        @include down-1366 {
+          bottom: -175px !important;
+        }
+        @include down-1200 {
+          bottom: -195px !important;
+        }
+        @include down-1080 {
+          bottom: -215px !important;
+        }
+      }
+    }
+  }
+  &:after {
+    content: "";
+    width: 20%;
+    height: 470px;
+    position: absolute;
+    bottom: -260px;
+    left: 0;
+    background-image: url(/images/fafterBack.png?301aa92…);
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: left;
+    @include down-768 {
+      width: 40%;
+    }
+  }
+
+  &.organ-step {
+    .step {
+      .t {
+        @include down-1366 {
+          bottom: -66px !important;
+        }
+      }
+      &:nth-child(3) {
+        .t {
+          bottom: -50px !important;
+        }
+      }
+      &:nth-child(2) {
+        .t {
+          @include down-1366 {
+            bottom: -145px !important;
+          }
+        }
+      }
+      &:nth-child(4) {
+        .t {
+          @include down-1366 {
+            bottom: -150px !important;
+          }
+          @include down-1366 {
+            bottom: -166px !important;
+          } 
+        }
+      }
+      &:nth-child(5) {
+        .t {
+          h4 {
+            @include down-1080 {
+              font-size: .7rem !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.end-section2 {
+  background-image: url("/images/Bg-shop-frame.png");
+  margin: 250px 0 120px;
+  background-size: cover;
+  padding: 90px 0 0;
+  @include down-768 {
+    margin: 100px 0 150px;
+  }
+  .col-12 {
+    &:first-child {
+      img {
+        width: 90%;
+      }
+    }
+    &:last-child {
+      >div {
+        width: 445px;
+        margin-top: -10%;
+        @include down-850 {
+          width: 80%;
+          margin-top: -22%;
+        }
+        @include down-768 {
+          margin-top: 55px;
+          justify-content: center !important;
+          align-items: center !important;
+          margin-bottom: 70px;
+          text-align: center !important;
+        }
+        h2 {
+          @include down-1024 {
+            margin-bottom: 15px !important;
+          }
+          span {
+            font-size: 2.2rem;
+            color: $secondary-color;
+            @include down-1024 {
+              font-size: 2rem;
+            }
+            @include down-850 {
+              font-size: 1.8rem;
+            }
+            @include down-568 {
+              font-size: 1.5rem;
+            }
+          }
+        }
+        h6 {
+          line-height: 1.9;
+          color: $secondary-color;
+          font-weight: 650;
+          font-size: 1.1rem;
+          @include down-850 {
+            line-height: 1.8;
+            font-size: 1rem;
+          }
+        }
+        a {
+          background-color: $secondary-color;
+          color: $white-color;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+.plan-parent {
+  position: relative;
+  &:before {
+    content: "";
+    width: 20%;
+    height: 50%;
+    position: absolute;
+    top: 210px;
+    background-image: url(/images/sbeforeBack.png?b56f8fc…);
+    background-position: center;
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: right;
+    z-index: -1;
+    @include down-768 {
+      width: 50%;
+    }
+  }
+  .plan {
+    padding: 75px 0 40px;
+    @include down-992 {
+      padding: 60px 0 70px;
+    }
+    .sec-title {
+      display: none;
+      @include down-992 {
+        display: block;
+        margin-bottom: 85px;
+      }
+      @include down-768 {
+        margin-bottom: 55px;
+      }
+    }
+    .col-12 {
+      @include down-992 {
+        padding: 0 160px !important;
+        margin-bottom: 72px;
+        @include down-768 {
+          padding: 0 70px !important;
+        }
+        @include down-480 {
+          padding: 0 50px !important;
+        }
+      }
+      .plan-title {
+        padding: 20px 30px;
+        border-left: 1px solid #DFE1F3;
+        color: $secondary-color;
+        @include down-1200 {
+          padding: 10px 30px;
+        }
+        @include down-992 {
+          border: none;
+          background-color: $secondary-color;
+          color: $white-color; 
+          border-radius: 32px;
+          margin-right: 25px;
+          position: relative;
+          padding: 15px 12px;
+          box-shadow: 3px 9px 50px 1px rgb(0 86 159 / 10%);
+        }
+        img {
+          display: none;
+          @include down-992 {
+            display: block;
+            margin-left: 8px;
+          }
+        }
+        p {
+          margin-bottom: 5px;
+          line-height: 2;
+          @include down-1400 {
+            font-size: .8rem;
+          }
+        }
+        h3 {
+          font-size: 1.3rem;
+          margin-bottom: 0;
+          line-height: 2;
+          @include down-1400 {
+            font-size: 1rem;
+            margin-top: 8px;
+          }
+          @include down-1200 {
+            min-height: 39px;
+          }
+        }
+      }
+      .parent {
+        padding: 10px;
+        background-color: #30357c;
+        margin-top: 10px;
+        @include down-992 {
+          background-color: $white-color;
+          border-radius: 32px !important;
+          box-shadow: 3px 9px 50px 1px rgb(0 86 159 / 7%);
+          margin-top: -40px;
+          padding-top: 50px;
+        }
+  
+        .plan-details {
+          background-color: $white-color;
+          padding: 15px 0;
+          @include down-992 {
+            border-radius: 32px !important;
+            padding: 15px 40px !important;
+          }
+          .detail {
+            padding: 15px 25px;
+            border: 1px solid #c4c4c42b;
+            font-size: 1rem;
+            font-weight: 500;
+            color: $secondary-color;
+            justify-content: center;
+            text-align: center;
+            @include down-992 {
+              border-left: none;
+              border-right: none;
+              justify-content: start !important;
+              padding: 15px 0px;
+              text-align: right;
+            }
+            img {
+              margin-left: 20px;
+              display: none;
+              @include down-992 {
+                display: block;
+              }
+            }
+            p {
+              margin-bottom: 5px;
+              font-size: 1.8rem;
+              @include down-1200 {
+                font-size: 1.6rem;
+              }
+              span {
+                font-size: 1rem;
+                color: #C3C6E8;
+              }
+            }
+            h6 {
+              line-height: 1.8;
+              margin: 0;
+              padding: 11px 0;
+              &.num {
+                font-size: 1.6rem;
+                padding: 2px;
+              }
+            }
+            .H6P {
+              min-height: 75px;
+              display: flex;
+              align-items: center;
+              @include down-992   {
+                text-align: right;
+                min-height: 55px;
+              }
+              h6 {
+                line-height: 1.8;
+                margin-bottom: 0;
+                padding: 0;
+                @include down-1200 {
+                  line-height: 1.55;
+                  font-size: 1rem;
+                }
+                span {
+                  font-size: .9rem;
+                  color: #C3C6E8;
+                }
+              }
+            }
+            
+            .madrak {
+              text-align: center;
+              display: flex;
+              flex-flow: wrap;
+              align-items: center;
+              justify-content: center;
+              min-height: 79px;
+              p {
+                font-size: 0.65rem !important;
+                background-color: #c3c6e866;
+                color: $secondary-color !important;
+                padding: 5px 8px;
+                border-radius: 32px;
+                margin-right: 2px;
+                @include down-1366 {
+                  font-size: 0.6rem !important;
+                }
+                @include down-1200 {
+                  font-size: 0.5rem !important;
+                }
+              }
+            }
+            h5 {
+              margin-bottom: 5px;
+              line-height: 2;
+              font-size: 1.1rem;
+              display: none; 
+              @include down-992 {
+                display: block;
+                text-align: right;
+              }
+              @include down-414 {
+                font-size: 1.04rem;
+              } 
+            }
+          }
+        }
+      }
+     
+      &:first-child {
+        @include down-992 {
+          display: none;
+        }
+        .plan-title {
+          background-color: $secondary-color;
+          color: $white-color;
+          border-radius: 32px;
+          img {
+            display: block;
+            width: 70px;
+            margin-left: 15px;
+            @include down-1366 {
+              width: 60px;
+            }
+          }
+        }
+        .parent {
+          border-radius: 0 32px 32px 0;
+          .plan-details {
+            background-color: $secondary-color;
+            padding: 15px 20px;
+            .detail {
+              color: $white-color;
+              border: none;
+              border-bottom: 2px solid #f2f3f61f;
+              padding: 27px 0;
+              text-align: right;
+              @include down-1200 {
+                padding: 25.1px 0;
+              }
+              &.FixH1 {
+                padding: 42px 0;
+              }
+            }
+          }
+        }
+      }
+      &:nth-child(2) {
+        .parent {
+          .plan-details {
+            border-radius: 0  32px 32px 0;
+            padding-right: 15px;
+            .detail {
+              border-right: 0;
+            }
+          }
+        } 
+      }
+      &:last-child {
+        .plan-title {
+          color: #C3C6E8 ;
+          @include down-992  {
+            color: $white-color;
+            background-color: #8A90D2;
+            box-shadow: -6px 9px 32px 1px rgb(138 144 210 / 24%);
+          }
+        }
+        .parent {
+          border-radius: 32px 0 0 32px;
+          .plan-details {
+            border-radius: 32px 0 0 32px;
+            padding-left: 15px;
+            .detail {
+              border-left: 0;          
+              color: #C3C6E8 ;
+              @include down-992  {
+                color: $secondary-color;
+              }
+            
+            }
+          }
+        }
+      }
+    }
+    
+  }}

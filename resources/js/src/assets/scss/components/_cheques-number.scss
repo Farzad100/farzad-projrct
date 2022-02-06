@@ -1,0 +1,214 @@
+.c-series {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $border-color;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  ._c-s-title {
+    display: flex;
+    align-items: center;
+    width: 30%;
+  }
+
+  ._c-s-inputs {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .form-control-lg {
+    padding: .5rem 0;
+  }
+}
+
+.post-cheques-series {
+  display: flex;
+  border: 1px solid rgb(206 212 218);
+  border-radius: $radius-sm;
+  overflow: hidden;
+
+  input {
+    border: 0;
+    width: 100%;
+    direction: ltr;
+    text-align: center;
+    @extend .estedad-font;
+    background: $white-color;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: $trans;
+
+    &:hover {
+      &:not(:disabled) {
+        border-color: rgba($border-color, .1);
+      }
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $border-color;
+      background: $white-color;
+    }
+
+    &:disabled {
+      background: transparent;
+    }
+
+    &::placeholder {
+      font-size: 16px;
+      color: rgba($color-primary-dark, .3)
+    }
+  }
+
+  ._validation-wrapper {
+    display: flex;
+    width: 100%;
+    padding: .3em;
+
+    input {
+      width: 100%;
+    }
+  }
+
+  ._right-slash {
+    position: relative;
+    max-width: 120px;
+    padding: .3em;
+    padding-right: .8em;
+    margin-right: 0.5em;
+
+    > span {
+      position: relative;
+      display: block;
+
+      &:after {
+        content: "";
+        height: 1px;
+        width: 117%;
+        position: absolute;
+        display: block;
+        background: rgb(206 212 218);
+        bottom: -2px;
+        left: -5px;
+      }
+    }
+
+    input {
+      padding: .4em .1em;
+    }
+
+    &:after {
+      content: "";
+      height: 114%;
+      width: 1px;
+      position: absolute;
+      display: block;
+      background: rgb(206 212 218);
+      top: -2px;
+      right: 0;
+      transform: rotate(15deg);
+    }
+  }
+}
+
+.def-cheques {
+  display: flex;
+  border: 1px solid rgb(206 212 218);
+  border-radius: $radius-sm;
+  overflow: hidden;
+
+  input {
+    border: 0;
+    width: 100%;
+    direction: ltr;
+    text-align: center;
+    @extend .estedad-font;
+    background: $white-color;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: $trans;
+
+    &:hover {
+      &:not(:disabled) {
+        border-color: rgba($border-color, .1);
+      }
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $border-color;
+      background:$white-color;
+    }
+
+    &:disabled {
+      background: #e1e1e1;
+    }
+
+    &::placeholder {
+      font-size: 16px;
+      color: rgba($color-primary-dark, .3)
+    }
+  }
+
+  ._validation-wrapper {
+    display: flex;
+    width: 100%;
+    padding: .3em;
+
+    input {
+      width: 100%;
+    }
+  }
+
+  ._right-slash {
+    position: relative;
+    max-width: 120px;
+    padding: .3em;
+    padding-right: .8em;
+    margin-right: 0.5em;
+
+    input {
+      padding: .8em .1em;
+    }
+
+    &:after {
+      content: "";
+      height: 106%;
+      width: 1px;
+      position: absolute;
+      display: block;
+      background: rgb(206 212 218);
+      top: -2px;
+      right: 0;
+      transform: rotate(15deg);
+    }
+  }
+
+  ._left-slash {
+    position: relative;
+    max-width: 120px;
+    padding: .3em;
+    padding-left: .8em;
+    margin-left: 0.5em;
+
+    input {
+      padding: .4em .1em;
+      height: 100%;
+    }
+
+    &:after {
+      content: "";
+      height: 106%;
+      width: 2px;
+      position: absolute;
+      display: block;
+      background: rgba(0, 87, 159, 0.15);
+      top: -2px;
+      left: 0;
+      transform: rotate(15deg);
+    }
+  }
+}

@@ -1,0 +1,93 @@
+.profile-form {
+  margin: auto;
+
+  ._p-f-tabs {
+    display: flex;
+    background: rgba($color-primary, .06);
+    padding: 5px;
+    border-radius: 50px;
+
+    > button {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border-radius: 50px;
+      padding: 10px 20px;
+      border: 0;
+      color: rgba($color-primary-dark, .6);
+      transition: all 250ms;
+      white-space: nowrap;
+
+      @include down-768 {
+        font-size: 14px;
+        padding: 8px 10px;
+      }
+
+      > span {
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+      }
+
+      > div {
+        display: flex;
+        align-items: center;
+
+        > span {
+          background: $border-color;
+          border-radius: 50px;
+          padding: 0 8px;
+          display: inline-flex;
+        }
+      }
+
+      &.active {
+        background: $white-color;
+        box-shadow: 0 1px 2px rgba($color-gray , 1);
+        color: rgba($color-primary-dark, 1);
+      }
+
+      &:focus {
+        outline: none;
+        color: rgba($color-primary-dark, 1);
+      }
+
+      &:hover {
+        color: rgba($color-primary-dark, 1);
+      }
+    }
+  }
+
+  @include down-768 {
+    padding: 0;
+  }
+
+  .description {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include up-992 {
+      max-width: 80%;
+    }
+  }
+
+  .addressWrapper {
+    .a-section {
+      margin: 0;
+      padding: 3rem 1rem .5rem;
+      background: rgba($color-gray, .3);
+    }
+
+    .row {
+      margin-bottom: 55px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,151 @@
+.new-order {
+  &-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+  }
+
+  .result-of-order {
+    position: sticky;
+    top: 35px;
+    z-index: 2;
+
+    > div {
+      background: $white-color;
+    }
+
+    .title {
+      font-weight: 300;
+    }
+
+    h4 {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+
+      small {
+        font-weight: 300;
+        font-size: 14px;
+        color: $light-color-primary-dark;
+        margin-right: 5px;
+      }
+    }
+
+    @include down-768 {
+      padding: 0;
+    }
+  }
+
+  &-footer {
+    padding: 0 0 45px 0;
+
+    @include up-992 {
+      padding: 45px 0 25px 0;
+      margin: -100px -1.5rem -1.5rem -1.5rem;
+    }
+  }
+
+  &.organ-wait {
+    .new-order-section:not(.section-first),
+    .new-order-footer {
+      opacity: 0.3;
+      pointer-events: none;
+      filter: grayscale(100);
+    }
+  }
+
+  &.inactive {
+    opacity: 0.3;
+    pointer-events: none;
+    filter: grayscale(100);
+  }
+
+  .refund-priod-card {
+    label {
+      padding: 0;
+      color: $light-color-primary-dark;
+
+      > div {
+        display: flex;
+        border-bottom: 1px solid $color-gray;
+
+        > span {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 10px;
+
+          strong {
+            font-size: 2rem;
+            margin-bottom: -10px;
+            font-weight: 300;
+          }
+
+          &:first-child {
+            border-left: 1px solid $color-gray;
+          }
+        }
+      }
+
+      > span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 10px 50px;
+
+        strong {
+          font-size: 1.2rem;
+        }
+      }
+
+      > small {
+        font-size: 11px;
+      }
+    }
+
+    input {
+      &:checked {
+        + label {
+          > div {
+            border-color: rgba($color-primary, 0.3) !important;
+
+            > span {
+              &:first-child {
+                border-color: rgba($color-primary, 0.3) !important;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .limit-alert {
+      background: rgba($color-gray, 0.2);
+      position: absolute;
+      @include equal-size(100%);
+      position: absolute;
+      top: 0;
+      z-index: 9;
+      backdrop-filter: blur(5px);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      color: $color-primary-dark;
+    }
+
+    &.limit {
+      pointer-events: none;
+
+      .limit-alert {
+        display: flex;
+      }
+    }
+  }
+}
+
+.order-lock {
+  
+}

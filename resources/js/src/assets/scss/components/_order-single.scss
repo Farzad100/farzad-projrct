@@ -1,0 +1,434 @@
+.order-single {
+  .price-show {
+    display: inline-flex;
+    align-items: center;
+    font-size: 60px;
+
+    > small {
+      font-size: 14px;
+      margin-right: 10px;
+    }
+  }
+
+  .address-slct-card {
+
+    >label {
+      padding-top: 5px;
+      padding-left: 0;
+      padding-right: 0;
+
+      h4 {
+        border-bottom: 1px solid $color-gray;
+        padding: 10px 1rem;
+        margin: 0;
+      }
+
+      >div {
+        padding: 10px 1rem;
+        border-bottom: 1px solid $color-gray;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+
+        &.parts {
+          padding: 0;
+          display: flex;
+          justify-content: space-between;
+
+          span {
+            border-left: 1px solid $color-gray;
+            padding: 10px 1rem;
+            width: 100%;
+
+            &:last-child {
+              border-left: 0;
+            }
+          }
+        }
+      }
+    }
+
+    p,
+    span {
+      font-size: 16px;
+    }
+
+    input {
+      &:checked {
+        +label {
+          * {
+            border-color: rgba($color-primary, .3) !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ch-above {
+  border: 1px solid $color-gray;
+  border-radius: $radius $radius 0 0;
+
+  .dates {
+    margin: 25px 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    span {
+      border: 1px solid $color-gray;
+      border-radius: 50px;
+      padding: 5px 15px;
+      display: block;
+      margin-left: 15px;
+      margin-bottom: 15px;
+
+      strong {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.cheque {
+  font-family: Pelak, 'IranNastaliq', tahoma;
+  border: 1px solid $color-gray;
+  direction: rtl;
+  padding: 25px;
+  box-sizing: border-box;
+
+  .num-box {
+    display: flex;
+    direction: ltr;
+    font-family: Pelak;
+
+    span {
+      width: 25px;
+      height: 29px;
+      border: 1px solid #bebebe;
+      border-left: 0;
+      color: $color-green;
+      font-size: 22px;
+      display: flex;
+      justify-content: center;
+
+      &:first-child {
+        border-left: 1px solid #bebebe;
+      }
+    }
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+
+    .dates {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .text-price,
+  .pay-to {
+    display: flex;
+
+    * {
+      white-space: nowrap;
+    }
+
+    p {
+      width: 100%;
+      position: relative;
+      border-bottom: 2px dotted;
+      display: flex;
+      justify-content: center;
+
+      span {
+        position: absolute;
+        color: $color-green;
+        font-family: Pelak;
+        font-weight: bold;
+        font-size: 20px;
+        display: flex;
+        background: $white-color;
+        bottom: -11px;
+        padding: 0 10px;
+      }
+    }
+  }
+
+  .pay-to {
+    align-items: center;
+
+    .middle {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      span {
+        border-bottom: 1px solid #000;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .num-price {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include down-1200 {
+    font-size: 75%;
+
+    .num-box {
+      span {
+        font-size: 18px;
+      }
+    }
+
+    h4 {
+      font-size: 1rem;
+    }
+
+    .text-price,
+    .pay-to {
+      p {
+        span {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  @include down-768 {
+    .header {
+      .dates {
+        > img {
+          height: 40px;
+        }
+      }
+
+      > img {
+        height: 40px;
+      }
+    }
+    .text-price,
+    .pay-to {
+      p {
+        span {
+          font-size: 14px;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  @include down-568 {
+    font-size: 55%;
+
+    .num-box {
+      span {
+        font-size: 14px;
+        width: 17px;
+        height: 19px;
+      }
+    }
+
+    h4 {
+      font-size: .7rem;
+    }
+
+    .text-price,
+    .pay-to {
+      p {
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.order-road-map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
+
+  >div {
+    span {
+      position: relative;
+      margin: 0 3px;
+      font-size: 14px;
+      padding: 0 25px;
+      font-family: Pelak;
+      color: $color-gray;
+
+      &:before {
+        content: '';
+        width: 100%;
+        height: 6px;
+        position: absolute;
+        bottom: -15px;
+        background: $color-gray;
+        right: 0;
+      }
+    }
+
+    &:first-child {
+      span {
+        &:before {
+          border-radius: 0 50px 50px 0;
+        }
+      }
+    }
+
+    &:last-child {
+      span {
+        &:before {
+          border-radius: 50px 0 0 50px;
+        }
+      }
+    }
+  }
+
+  >.passed {
+    span {
+      color: $color-green;
+
+      &:before {
+        background: $color-green;
+      }
+    }
+  }
+
+  >.active {
+    span {
+      color: $color-primary;
+
+      &:before {
+        background: $color-primary;
+      }
+    }
+  }
+}
+
+.submit-docs {
+  position: sticky;
+  bottom: 5px;
+  margin: 30px auto 0 auto;
+
+  @include down-992 {
+    bottom: 64px;
+  }
+
+  .row {
+    background: rgba($color-green, .2);
+    backdrop-filter: blur(10px);
+    border-radius: $radius;
+    box-shadow: 0 0 0 5px $white-color;
+  }
+
+  &.redirect {
+    .row {
+      background: rgba($color-orange, .1);
+      color: $color-orange;
+    }
+  }
+}
+
+.order-alert {
+  display: flex;
+  align-items: center;
+
+  i {
+    font-size: 36px;
+    padding: 0 10px 0 25px;
+  }
+
+  h6 {
+    font-weight: bold;
+  }
+
+  @include down-768 {
+    flex-direction: column;
+    text-align: center;
+
+    i {
+      padding: 0 0 15px 0;
+    }
+  }
+}
+
+.doc-alert {
+  border-radius: $radius;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+
+  ._status {
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    padding-right: 10px;
+  }
+
+  .icon {
+    @include equal-size(26px);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+
+    i {
+      font-size: 13px;
+      color: $white-color;
+    }
+  }
+
+  @include down-768 {
+    flex-direction: column;
+
+    ._status {
+      margin-top: 10px;
+      font-size: 12px;
+    }
+  }
+
+  &._success {
+    color: $color-green;
+    border: 1px solid rgba($color-green, .15);
+    background: rgba($color-green, .02);
+
+    ._status {
+      background: rgba($color-green, .1);
+    }
+
+    .icon {
+      background-color: #059c36;
+      background-image: linear-gradient(45deg, #059c36 0%, #55e46e 100%);
+    }
+  }
+
+  &._checking {
+    color: $color-orange;
+    border: 1px solid rgba($color-orange, .15);
+    background: rgba($color-orange, .02);
+
+    ._status {
+      background: rgba($color-orange, .1);
+    }
+
+    .icon {
+      background-color: #ff742d;
+      background-image: linear-gradient(45deg, #ff742d 0%, #F7CE68 100%);
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.empty-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img,
+    span {
+        width: 50%;
+        max-width: 200px;
+    }
+
+    span {
+        color: #b4b6c2;
+    }
+}

@@ -1,0 +1,38 @@
+.long-forms {
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+
+  &-item {
+    margin: 50px 0;
+
+    &.pass {
+      border-color: $color-green !important;
+      box-shadow: 0 0 0 5px rgba($color-green, .1);
+
+      .special-font {
+        color: $color-green !important;
+      }
+    }
+
+    &.inactive {
+      filter: grayscale(100);
+      pointer-events: none;
+      opacity: .5;
+    }
+
+    @include down-568 {
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+      padding-bottom: 0 !important;
+
+      .special-font {
+        text-align: center !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,184 @@
+.dropzone {
+  border-radius: $radius;
+  border: 1px dashed $border-color !important;
+  background: rgba($color-gray, .5) !important;
+  min-height: unset !important;
+  font-family: 'Pelak', sans-serif !important;
+  color: unset !important;
+  min-height: unset !important;
+  padding: 0 !important;
+  position: relative;
+
+  &.file-success {
+    border-color: rgba($color-green, 1) !important;
+    animation: animate .8s ease-in-out infinite alternate;
+
+    @keyframes animate {
+      from {
+        box-shadow: 0 0 0 0px rgba($color-green, .2);
+      }
+      to {
+        box-shadow: 0 0 0 5px rgba($color-green, .2);
+      }
+    }
+
+    .dz-message {
+      position: sticky;
+      top: 0;
+      z-index: 3;
+      border-bottom: 3px solid #eff0f3;
+
+      @include down-768 {
+        .hint {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &.control-event {
+    pointer-events: none;
+    .action-buttons {
+      pointer-events: fill;
+    }
+  }
+
+  .dz-message {
+    margin: 0 !important;
+    background: $white-color;
+    padding: 25px !important;
+    border-radius: $radius;
+
+    .hint {
+      span {
+        color: rgba(#000, .7);
+      }
+    }
+  }
+
+  &.dz-drag-hover {
+    border-color: $color-blue !important;
+  }
+
+  &:hover {
+    border-color: $color-blue !important;
+  }
+
+  &.dz-started {
+    .dz-message {
+      display: block !important;
+    }
+  }
+
+  .alert-danger {
+    margin: 15px -23px -23px -23px;
+    border-radius: 0 0 $radius $radius;
+  }
+
+  .dz-preview {
+    background: $white-color;
+    display: flex !important;
+    align-items: center;
+    margin: 15px !important;
+    border-radius: $radius;
+    padding: 5px;
+    min-height: unset !important;
+    pointer-events: fill;
+
+    .dz-remove {
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: 1px solid $color-red-500 !important;
+      color: $color-red-500 !important;
+      @include equal-size(30px);
+      text-decoration: none !important;
+      border-radius: 100%;
+      opacity: 1 !important;
+      position: static !important;
+      padding: 0 0 0 2px !important;
+      
+      &:hover {
+        background: $color-red-500 !important;
+        border: 1px solid $color-red-500;
+        color: $white-color !important;
+        text-decoration: none !important;
+      }
+    }
+    
+    .file-name {
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 70%;
+      width: 100%;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 50px;
+        height: 100%;
+        background-color: transparent;
+        background-image: linear-gradient(90deg, transparent 0%, $white-color 100%);
+      }
+    }
+
+    @include down-768 {
+      flex-direction: column;
+    }
+
+    .dz-image {
+      background: #eee;
+      width: 130px !important;
+      min-width: 130px !important;
+      height: auto !important;
+      overflow: hidden !important;
+
+      img {
+        border-radius: $radius;
+        width: 100%;
+      }
+    }
+
+    .file-details {
+      width: 100%;
+      padding: 15px;
+
+      .progress {
+        height: 3px;
+        direction: ltr;
+      }
+
+      .size {
+        display: flex;
+        align-items: center !important;
+
+        @include down-568 {
+          display: none;
+        }
+      }
+    }
+
+    &:hover {
+      .dz-image {
+        img {
+          border-radius: $radius;
+          filter: unset !important;
+          transform: unset !important;
+        }
+      }
+    }
+  }
+
+  @include down-568 {
+    .title {
+      flex-direction: column;
+
+      button {
+        margin-top: 10px;
+      }
+    }
+  }
+}

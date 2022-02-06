@@ -1,0 +1,81 @@
+.form-builder {
+  ._row {
+    border-bottom: 1px solid $border-color;
+    padding: 0 1rem 2.5em;
+    margin: 0 0 3.5em 0;
+
+    &:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  ._section-title {
+    position: sticky;
+    top: 25px;
+  }
+
+  ._range-min-max {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -8px;
+    font-size: 12px;
+  }
+
+  ._form-builder-checks {
+    display: flex;
+    flex-wrap: wrap;
+
+    ._check-itself {
+      box-shadow: 0 1px 1px rgba(0, 87, 159, 0.09);
+      border: 1px solid $border-color;
+      padding: 0.4em .6em 0.4em 1em;
+      margin: 0 0 .5em .5em;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      &:before {
+        content: "";
+        min-width: 17px;
+        width: 17px;
+        height: 17px;
+        border: 5px solid $border-color;;
+        margin-left: .5em;
+      }
+      
+      &._box {
+        border-radius: $radius;
+
+        &:before {
+          border-radius: 0.1em;
+        }
+      }
+      
+      &._radio {
+        border-radius: 50px;
+        
+        &:before {
+          border-radius: 100%;
+        }
+      }
+    }
+
+    input {
+      display: none;
+
+      &:checked {
+        + ._check-itself {
+          border-color: rgba($color-blue, .5);
+          color: $color-blue;
+          
+          &:before {
+            border-color: $color-blue;
+          }
+        }
+      }
+    }
+  }
+}

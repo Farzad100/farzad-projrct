@@ -1,0 +1,7 @@
+._pagination {
+    .active {
+        border-color: $color-primary-dark !important;
+        color: $color-primary-dark !important;
+        background: rgba($color-primary-dark, .04);
+    }
+}

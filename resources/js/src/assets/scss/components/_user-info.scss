@@ -1,0 +1,36 @@
+._user-info {
+
+  .nav-tabs {
+    @extend .bg-gray-light;
+    border-bottom-color: rgba($color-primary, .15);
+
+    .nav-link {
+      padding: .3rem 1rem;
+      border-radius: $radius $radius 0 0;
+      color: rgba($color-primary-dark, .9);
+
+      &:hover {
+        background: rgba($color-primary-dark, .05);
+        border-color: transparent;
+      }
+
+      &.active {
+        border-color: rgba($color-primary, .15);
+        border-bottom-color: transparent;
+        color: rgba($color-primary-dark, 1);
+        
+        &:hover {
+          border-color: rgba($color-primary, .15);
+          border-bottom-color: transparent;
+          color: rgba($color-primary-dark, 1);
+          background: $white-color;
+        }
+      }
+    }
+  }
+
+  .list-group-item {
+    background: transparent;
+    border-bottom-color: rgba($color-primary, .15);
+  }
+}

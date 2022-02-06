@@ -1,0 +1,374 @@
+// Flexbox
+// ----------------------------------
+.jcb { justify-content: space-between; }
+.jcc { justify-content: center; }
+.aic { align-items: center; }
+.jcfe { justify-content: flex-end; }
+
+// Pointer Event
+// ----------------------------------
+.p-e-none {
+  pointer-events: none !important;
+}
+
+// Opacity
+// ----------------------------------
+.opa-9 { opacity: .9; }
+.opa-8 { opacity: .8; }
+.opa-7 { opacity: .7; }
+.opa-5 { opacity: .5; }
+.opa-3 { opacity: .3; }
+
+// Text Colors
+// ----------------------------------
+.text-brand { color: #30357B }
+.text-brand-dark-30 {  color: $light-color-primary-dark }
+.text-red-200 { color: $color-red-200 }
+.text-red-500 { color: $color-red-500 }
+.text-green { color: $color-green }
+.text-blue { color: $color-blue !important }
+.text-orange { color: $color-orange !important }
+
+// Background Colors
+// ----------------------------------
+.bg-black { background: #111 }
+.bg-gray { background: $color-gray }
+.bg-gray-light { background: rgba($color-primary, .03); }
+.bg-primary { background: $color-primary}
+.bg-primary-dark { background: $color-primary-dark}
+.light-danger-bg { background: rgba($color-red-500, .1); }
+.light-success-bg { background: rgba($color-green, .1); }
+.light-warning-bg { background: rgba($color-orange, .1); }
+
+// Font size
+// ----------------------------------
+.font-sm {
+  font-size: .7rem;
+}
+.font-lg {
+  font-size: 1.5rem;
+}
+
+// Shadow
+// ----------------------------------
+.shadow-0 {
+  box-shadow: none !important;
+}
+
+// Maximum widths
+// ----------------------------------
+.max-width-360 {
+  max-width: 360px;
+
+  @include down-568 {
+    max-width: 96%;
+  }
+}
+
+.description {
+  text-align: center;
+  margin: auto;
+
+  @include up-992 {
+    max-width: 80%;
+  }
+}
+
+.price-style {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 0;
+
+  > small {
+    font-size: .8rem;
+    margin-right: 5px;
+  }
+}
+
+// Loading
+// ----------------------------------
+.page-loading {
+  display: flex;
+  justify-content: center;
+  margin: 150px 0;
+
+  > .spinner-border {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.small-process {
+  font-weight: 200;
+  margin-top: 10px;
+  font-size: .8rem;
+
+  > div {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .spinner-border {
+    width: 13px;
+    height: 13px;
+    margin-left: 5px;
+  }
+
+  i {
+    margin-left: 5px;
+    font-size: 1rem;
+  }
+
+  .success {
+    color: $color-green;
+  }
+
+  .error {
+    color: $color-red-500;
+  }
+}
+
+// Auth
+// ----------------------------------
+.auth-or {
+  position: relative;
+  margin: 30px auto 0;
+  padding-top: 25px;
+  text-align: center;
+  border-top: 1px solid $color-gray;
+
+  &:before {
+    content: '•';
+    position: absolute;
+    background:$white-color ;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: -12px;
+    width: 40px;
+  }
+}
+
+.no-focus-outline {
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+}
+
+
+// APEX chart Tooltip
+// ----------------------------------
+.apexcharts-tooltip {
+  background: $white-color !important;
+
+  .apexcharts-tooltip-marker {
+    margin-right: unset;
+    margin-left: 10px;
+  }
+
+  .apexcharts-tooltip-title {
+    background: transparent !important;
+  }
+}
+
+.in-chart-card {
+  background: rgba($color-primary, .1);
+  color: $color-primary;
+  display: flex;
+  flex-direction: column;
+  border-radius: $radius;
+  width: 50%;
+  padding: 1rem;
+
+  &:first-child {
+    width: 100%;
+    background: rgba($color-green, .1);
+    color: $color-green;
+  }
+
+  @include down-992 {
+    width: 100%;
+  }
+}
+
+// Organ
+// ----------------------------------
+.organ-dash-card {
+  background: rgba($color-primary, .1);
+  color: $color-primary;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: $radius;
+  width: 100%;
+  padding: 1rem;
+
+  &:first-child {
+    background: rgba($color-red-500, .1);
+    color: $color-red-500;
+  }
+}
+
+.pe_active {
+  pointer-events: auto !important;
+
+  * {
+    pointer-events: none !important;
+  }
+}
+
+
+.float-light-alert {
+  background: $white-color;
+  box-shadow: 0 5px 10px rgba(#000, 0.2);
+  border: 1px solid $color-gray;
+  position: sticky;
+  bottom: -100%;
+  padding: 15px;
+  width: 100%;
+  border-radius: $radius;
+  transition: all 250ms;
+  display: none;
+
+  &.active {
+    display: flex;
+    bottom: 25px;
+  }
+}
+
+.scroll-wrapper {
+  overflow: hidden;
+  width: 100%;
+
+  &-inner {
+    width: 105.5%;
+    overflow-y: scroll;
+  }
+
+  &.scroll-300 {
+    .scroll-wrapper-inner {
+      max-height: 400px;
+    }
+  }
+}
+
+.mobile-scroller {
+  @include down-1200 {
+    width: 100%;
+    overflow-x: scroll;
+  }
+}
+
+input.dz-hidden-input {
+  display: none;
+}
+
+.help-sm-btn {
+  opacity: .5;
+  cursor: pointer;
+  transition: $trans;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.line-height-38 {
+  line-height: 38px;
+}
+
+.user-badge {
+  border-radius: 100%;
+  display: inline-block;
+  font-size: 14px !important;
+  margin-right: 5px;
+  opacity: 1 !important;
+
+  &._lg {
+    font-size: 1.2rem !important;
+  }
+
+  &.yellow {
+    color: #FFC107;
+  }
+
+  &.red {
+    color: #D50000;
+  }
+
+  &.gray {
+    color: #B0BEC5;
+  }
+}
+
+// Anydesk help
+.anydesk-help {
+  text-align: center;
+
+  > small {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      background-color: #ffe0da;
+      background-image: linear-gradient(295deg, #ffe0da 0%, #ffcece 100%);
+      border-radius: $radius;
+      padding: 5px 10px;
+      font-size: .8rem;
+      display: flex;
+      align-items: center;
+      color: #000;
+      margin: 0 5px;
+      transition: all 250ms;
+
+      img {
+        height: 24px;
+        margin-left: 5px;
+      }
+
+      &:hover {
+        transform: scale(1.08);
+      }
+    }
+  }
+}
+
+// Date Picker
+// ----------------------------------
+._date-picker-fast {
+  display: inline-flex;
+  align-items: center;
+
+  ._btn {
+    @extend .bg-gray-light;
+    border: 1px solid $border-color;
+    border-radius: 50px;
+    padding: 0.3em .8em;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: .4em;
+    box-shadow: 0 1px 0 rgb(27 31 35 / 4%),
+    inset 0 1px 0 rgb(255 255 255 / 25%);
+
+    &:hover {
+      background: $white-color;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

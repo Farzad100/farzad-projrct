@@ -1,0 +1,72 @@
+.selectable-input {
+
+    label {
+        border-radius: $radius-sm;
+        width: 100%;
+        padding: 15px 15px 70px 15px;
+        border: 1px solid $color-gray;
+        color: $light-color-primary-dark;
+        cursor: pointer;
+        position: relative;
+        transition: $trans;
+
+        &:before {
+            content: '';
+            @include equal-size(16px);
+            border: 3px solid $white-color;
+            box-shadow: 0 0 0 2px $color-gray;
+            background: transparent;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            bottom: 15px;
+            border-radius: 3px;
+            transition: $trans;
+        }
+
+        &:hover {
+            color: $color-primary-dark;
+            &:before {
+                background: $color-gray;
+            }
+        }
+    }
+
+    &.radio {
+        label {
+            &:before {
+                border-radius: 100%;
+            }
+        }
+    }
+
+    input {
+        &:checked {
+            + label {
+                border-color: rgba($color-primary, .3);
+                background: rgba($color-primary, .05);
+                color: $color-primary;
+
+                &:before {
+                    box-shadow: 0 0 0 2px $color-primary;
+                    background: $color-primary;
+                }
+            }
+        }
+    }
+}
+
+.h-label {
+    label {
+        padding: 15px;
+
+        &:before {
+            left: unset;
+            right: 15px;
+            bottom: unset;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}

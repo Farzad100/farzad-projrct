@@ -1,0 +1,63 @@
+@import '../js/src/assets/scss/fonts';
+@import '../js/src/assets/scss/variables';
+@import '../js/src/assets/scss/mixins';
+@import '../js/src/assets/scss/utils';
+
+body {
+  text-align: right;
+  font-family: 'Pelak', sans-serif;
+  color: $color-primary-dark;
+}
+
+.special-font {
+  font-family: 'Pelak', sans-serif !important;
+  font-weight: bold;
+  line-height: 44px;
+}
+
+.developers-wrapper {
+  min-height: 75vh;
+}
+
+code {
+  text-align: left;
+  direction: ltr;
+  border-radius: $radius;
+}
+
+footer.developers {
+  background: #f6fafd;
+
+  .links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 50px;
+
+    a {
+      color: $color-primary;
+      text-decoration: none;
+      margin-right: 15px;
+
+      &:hover {
+        opacity: .5;
+      }
+
+      &:last-child {
+        direction: ltr;
+        text-align: left;
+        display: inline-flex;
+      }
+    }
+  }
+
+  @include down-768 {
+    text-align: center;
+
+    .links {
+      margin-top: 25px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+}

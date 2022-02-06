@@ -1,0 +1,100 @@
+.order-card {
+  border-radius: $radius;
+  border: 1px solid rgba($color-primary, .15);
+  background: $white-color;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  color: $color-primary-dark;
+  transition: $trans;
+
+  >.logo-in-card {
+    position: absolute;
+    left: -37px;
+    top: -35px;
+    width: 131px;
+    opacity: .3;
+  }
+
+  .amount {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    i {
+      font-size: 24px;
+      margin-left: 10px;
+      opacity: .3;
+    }
+
+    span {
+      font-size: 14px;
+    }
+
+    .org-shop {
+        font-size: 14px;
+        margin-bottom: 2px;
+        background: $color-gray;
+        padding: 3px 7px;
+        border-radius: 50px;
+
+        i {
+            font-size: 14px;
+            margin-left: 0;
+            opacity: 1;
+        }
+    }
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: $color-primary-dark;
+    box-shadow: 0 0 0 3px rgba($color-primary, .05);
+  }
+
+  &.sk-loading {
+    .amount h4 {
+      background: $color-gray;
+      @include size(145px, 30px);
+      border-radius: 3px;
+      animation: loading 1s infinite linear;
+    }
+
+    small {
+      display: inline-block;
+      background: $color-gray;
+      @include size(100px, 20px);
+      border-radius: 3px;
+      animation: loading 1s infinite linear;
+    }
+
+    .jcb {
+      .badge {
+        background: $color-gray;
+        border-radius: 50px;
+        @include size(80px, 25px);
+      }
+
+      span {
+        background: $color-gray;
+        @include size(97px, 20px);
+        border-radius: 3px;
+        animation: loading 1s infinite;
+      }
+    }
+  }
+}
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .3;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

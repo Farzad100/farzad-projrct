@@ -1,0 +1,104 @@
+@import 'fonts';
+@import 'variables';
+@import 'mixins';
+@import 'utils';
+
+html {
+  // height: 101%;
+}
+
+body {
+  text-align: right;
+  font-family: 'Pelak', sans-serif;
+  color: $color-primary-dark;
+  counter-reset: steps faq;
+  font-size: 14px;
+}
+
+.special-font {
+  font-family: 'Pelak', sans-serif !important;
+}
+
+.nova-font {
+  font-family: 'Pelak', monospace !important;
+}
+
+.estedad-font {
+  font-family: 'Pelak', sans-serif !important;
+}
+
+.roboto-mono-font {
+  font-family: 'Pelak', monospace !important;
+}
+
+.spinner-border {
+  border-width: 0.1em;
+}
+
+.ltr {
+  direction: ltr !important;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  text-align: left;
+}
+
+// Layouts
+@import 'layouts/dashboard';
+@import 'layouts/auth';
+@import 'layouts/default';
+
+// Components
+@import 'components/bs-reset';
+@import 'components/password-input';
+@import 'components/active-card';
+@import 'components/empty-section';
+@import 'components/list-view';
+@import 'components/order-card';
+@import 'components/order-single';
+@import 'components/new-order';
+@import 'components/order-type';
+@import 'components/amount-ranger';
+@import 'components/selectable-input-group';
+@import 'components/profile-form';
+@import 'components/uploader';
+@import 'components/installments';
+@import 'components/alert-messages';
+@import 'components/long-forms';
+@import 'components/pay-response';
+@import 'components/long-list';
+@import 'components/inst-status';
+@import 'components/filter-dropdown';
+@import 'components/landing-auth';
+@import 'components/notes';
+@import 'components/loading';
+@import 'components/shops-public';
+@import 'components/checkbox-list';
+@import 'components/steps-vertical';
+@import 'components/order-info';
+@import 'components/user-info';
+@import 'components/reports-wrapper';
+@import 'components/apex-chart';
+@import 'components/pagination';
+@import 'components/reposts-tab';
+@import 'components/banks-selector';
+@import 'components/bank-list-select';
+@import 'components/timeline';
+@import 'components/order-steps';
+@import 'components/form-builder';
+@import 'components/cheques-number';
+@import 'components/multi-select';
+@import 'components/qr-scanner';
+
+// Fontawesome
+@import 'fontawesome/fontawesome.scss';
+@import 'fontawesome/solid.scss';
+@import 'fontawesome/regular.scss';
+@import 'fontawesome/light.scss';
+@import 'fontawesome/duotone.scss';
+
+.brad-half {
+  border-radius: 0.5em;
+}
+
+.text-justify {
+  text-align: justify !important;
+}

@@ -1,0 +1,27 @@
+.filter-dropdown {
+  .btn {
+    &:after {
+      display: none;
+    }
+  }
+  .dropdown-menu {
+    border-radius: $radius;
+    border-color: $color-gray;
+    min-width: 350px;
+    text-align: right;
+  }
+
+  @include down-992 {
+    .dropdown-menu {
+      position: fixed;
+      right: 0;
+      left: 0;
+      bottom: 58px;
+      top: unset;
+      border-radius: 0;
+      box-shadow: none !important;
+      height: 350px;
+      overflow-x: scroll;
+    }
+  }
+}

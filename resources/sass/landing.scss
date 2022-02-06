@@ -1,0 +1,398 @@
+@import '../js/src/assets/scss/fonts';
+@import '../js/src/assets/scss/variables';
+@import '../js/src/assets/scss/mixins';
+@import '../js/src/assets/scss/utils'; 
+
+.btn {
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5em 1em;
+
+  &.btn-primary {
+    background: $color-primary-dark;
+
+    &:hover {
+      background: lighten($color-primary-dark, 9);
+    }
+  }
+
+  &.btn-success {
+    background: #009b41;
+
+    &:hover {
+      background: lighten(#009b41, 4);
+    }
+  }
+
+  &.btn-outline-primary {
+    border-color: $color-primary-dark;
+    color: $color-primary-dark;
+    padding: 0.4em 1em;
+
+    &:hover {
+      background: $color-primary-dark;
+      color: $white-color;
+    }
+  }
+
+  &.btn-outline-accent {
+    border-color: $color-accent;
+    color: $color-accent;
+    padding: 0.4em 1em;
+
+    &:hover {
+      background: $color-accent;
+      color: $white-color;
+    }
+  }
+
+  &.btn-accent {
+    background: $color-accent;
+    color: $white-color;
+
+    &:hover {
+      background: darken($color-accent, 4);
+    }
+  }
+
+  &.btn-primary,
+  &.btn-secondary,
+  &.btn-success,
+  &.btn-danger,
+  &.btn-warning,
+  &.btn-info,
+  &.btn-light,
+  &.btn-dark {
+    border: 0
+  }
+
+  &.btn-light {
+    border: 1px solid $color-gray;
+    border-radius: $radius;
+    background: $white-color;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 1px 0 rgba(27, 31, 35, .04), inset 0 1px 0 hsla(0, 0%, 100%, .25);
+
+    &:hover {
+      background-color: #f6f6f8;
+    }
+  }
+
+  &:not(.btn-lg) {
+    .spinner-border {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  .spinner-border {
+    display: none;
+  }
+
+  &.btn-loading {
+    opacity: .65;
+    pointer-events: none;
+    padding: .5em .5em;
+
+    .spinner-border {
+      display: inline;
+    }
+
+    .btn-text {
+      display: none !important;
+    }
+  }
+}
+
+.landing-style {
+
+  nav {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9;
+    width: 100%;
+    padding: 10px;
+    transition: all 250ms;
+    position: fixed;
+
+
+    >div {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      padding: 8px 15px;
+
+      img {
+        height: 60px;
+
+        @include down-768 {
+          height: 40px;
+        }
+      }
+    }
+
+    @include down-568 {
+      padding: 10px;
+      top: 0;
+      border-radius: 0;
+      max-width: 100%;
+    }
+
+    &.bg-active {
+      top: 0;
+      border-radius: 0;
+      max-width: 100%;
+      background: rgba($white-color, 1);
+      box-shadow: 0 5px 50px rgba(#000, .1);
+    }
+
+    &.w-d-logo {
+      .dark-logo {
+        display: none;
+      }
+
+      &.bg-active {
+        .light-logo {
+          display: none;
+        }
+
+        .dark-logo {
+          display: block;
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+  
+
+    
+
+    
+  }
+
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // footer {
+  //   // background: #f6fafd;
+
+  //   .links {
+  //     display: flex;
+  //     justify-content: flex-end;
+  //     align-items: center;
+  //     min-height: 50px;
+
+  //     a {
+  //       color: $color-primary;
+  //       text-decoration: none;
+  //       margin-right: 15px;
+
+  //       &:hover {
+  //         opacity: .5;
+  //       }
+
+  //       &:last-child {
+  //         direction: ltr;
+  //         text-align: left;
+  //         display: inline-flex;
+  //       }
+  //     }
+  //   }
+
+  //   @include down-768 {
+  //     text-align: center;
+
+  //     .links {
+  //       margin-top: 25px;
+  //       justify-content: center;
+  //       flex-wrap: wrap;
+  //     }
+  //   }
+  // }
+
+
+.tablet-feat-list {
+  overflow: hidden;
+  max-height: 200px;
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+
+  &.open {
+    max-height: 9999px;
+    transition: max-height 1s ease-in-out;
+    ;
+  }
+}
+
+.vh-100 {
+  height: 100vh;
+}
+
+.bg-dark-5 {
+  color: $white-color;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+}
+
+#foggy {
+  width: 100%;
+  z-index: -1;
+  animation: bannerGradient 20s linear infinite;
+}
+
+@keyframes bannerGradient {
+  0% {
+    background-position: 0 50%
+  }
+
+  25% {
+    background-position: 40% 0
+  }
+
+  50% {
+    background-position: 50% 70%
+  }
+
+  75% {
+    background-position: 100% 40%
+  }
+
+  100% {
+    background-position: 0 50%
+  }
+}
+
+.ltr {
+  direction: ltr;
+}
+
+.came-shop-info {
+  background: rgba(0, 87, 159, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 180px;
+  padding-bottom: 80px;
+
+  >div {
+    max-width: 96%;
+  }
+
+  .shop-card {
+    position: relative;
+    overflow: hidden;
+    background: $white-color;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: $radius;
+    width: 500px;
+    max-width: 100%;
+    box-shadow: 0 10px 10px rgba($color-primary-dark, .08);
+
+    .logo {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        max-width: 80%;
+        max-height: 200px;
+      }
+    }
+
+    *:not(.blury) {
+      z-index: 2;
+    }
+
+    .blury {
+      position: absolute;
+      filter: blur(23px);
+      left: 8%;
+      top: 37%;
+      transform: scale(2) rotate(14deg);
+      z-index: 0;
+      opacity: .5;
+      display: none;
+    }
+  }
+}
+
+.sponsors {
+
+  .logos {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    .item {
+      flex: 1 0 24%;
+      border-left: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
+      margin-left: -1px;
+      margin-bottom: -1px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 35px 15px;
+      // filter: grayscale(100);
+      transition: $trans;
+
+      &:hover {
+        filter: grayscale(0);
+        background: rgba($border-color, .05);
+      }
+
+      img {
+        max-height: 130px;
+        max-width: 200px;
+      }
+    }
+  }
+}
